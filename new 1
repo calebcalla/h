@@ -1,0 +1,38 @@
+
+import java.util.*;
+
+class Buffering{
+	public static void main(String args[]){
+		Buffering bufferVault= new Buffering();
+		Scanner a = new Scanner(System.in);
+		String input= a.next();
+		String input2 = input.substring("LBCTF{".length(),input.length()-1);
+		if(buffervault.checkPassword(input2)){
+			System.out.println("Access granted.");
+		}
+		else{
+			System.out.println("Access Denied!");
+		}
+	}
+	public boolean checkPassword(String pswd){
+		return(pswd.length()==18&&
+		pswd.charAt(0)=='O'&&
+		pswd.charAt(2)=='e'&&
+		pswd.charAt(3)=='n' &&
+		pswd.charAt(15)=='e'&&
+	           pswd.charAt(1)  == 'p' &&
+            	pswd.charAt(6)  == 'u' &&
+            	pswd.charAt(8) == 'C' &&
+            	pswd.charAt(4)  == 'Y' &&
+            	pswd.charAt(5) == 'o' &&
+            	pswd.charAt(13) == 'u' &&
+            	pswd.charAt(7)  == 'r' &&
+            	pswd.charAt(10) == 'r' &&
+            	pswd.charAt(12) == 'p' &&
+            	pswd.charAt(9)  == 'o' &&
+		pswd.charAt(16)=='r'&&
+            	pswd.charAt(11) == 'n' &&
+           	 pswd.charAt(14) == 't' &&
+		pswd.charAt(17)=='!');
+	}
+}
